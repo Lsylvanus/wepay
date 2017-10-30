@@ -2,15 +2,15 @@ package main
 
 import (
 	"github.com/Sirupsen/logrus"
-	"github.com/koding/multiconfig"
 	"github.com/joho/godotenv"
+	"github.com/koding/multiconfig"
 )
 
 // Config 配置结构体
 type Config struct {
 	DB    string `default:"mysql"`
 	DBURL string `default:"localhost"`
-	Debug bool `default:"true"`
+	Debug bool   `default:"true"`
 }
 
 var config Config

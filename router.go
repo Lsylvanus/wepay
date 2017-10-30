@@ -4,7 +4,6 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
-	"errors"
 )
 
 func initRouter() {
@@ -13,7 +12,7 @@ func initRouter() {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "wepay")
 	})
-	e.POST("/wepay/api",api)
+	e.GET("/wepay/api", api)
+	e.GET("/wepay/randnum", randNums)
 	e.Logger.Fatal(e.Start(":1323"))
 }
-
